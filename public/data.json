@@ -1,0 +1,1023 @@
+[
+    {
+        "id": "1",
+        "name": "Quantum Mechanics",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "syllabus": [
+            "The concept of wave-particle duality, where particles like electrons show both wave-like and particle-like behaviors.",
+            "Heisenberg’s uncertainty principle, stating that the exact position and momentum of a particle cannot both be known simultaneously.",
+            "The Schrödinger equation, which governs how quantum systems evolve over time.",
+            "The principle of quantum superposition, where systems can exist in multiple states at once until measured.",
+            "Quantum tunneling, a phenomenon where particles pass through barriers that would be impossible in classical mechanics.",
+            "Quantum entanglement, where particles are interconnected, and the state of one influences the state of another instantly, regardless of distance.",
+            "The concept of eigenstates and eigenvalues, related to quantized states and the corresponding measurable values of a system.",
+            "Pauli's exclusion principle, explaining that no two identical fermions can occupy the same quantum state.",
+            "The Copenhagen interpretation, focusing on the idea that the wavefunction collapses upon observation or measurement.",
+            "The role of spin and angular momentum, key features in describing quantum particles and their behavior."
+        ],
+        "questions": [
+            {
+                "question": "Who is considered the father of quantum mechanics?",
+                "img": "https://images.ctfassets.net/rvt0uslu5yqp/54oIU2b2seat31O3DTMkwJ/b40d6d48f999bffe6bc6b9695544619d/08-animals.webp",
+                "options": [
+                    "Albert Einstein",
+                    "Niels Bohr",
+                    "Werner Heisenberg",
+                    "Max Planck"
+                ],
+                "answer": 3,
+                "is_required": true
+                
+            },
+            {
+                "question": "What is the smallest indivisible unit of light called?",
+                "options": [
+                    "Photon",
+                    "Electron",
+                    "Proton",
+                    "Neutron"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the uncertainty principle in quantum mechanics?",
+                "options": [
+                    "The position and momentum of a particle cannot be precisely determined simultaneously.",
+                    "The energy and time of a particle cannot be precisely determined simultaneously.",
+                    "The spin and charge of a particle cannot be precisely determined simultaneously.",
+                    "The mass and velocity of a particle cannot be precisely determined simultaneously."
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the Schrödinger equation used for in quantum mechanics?",
+                "options": [
+                    "To calculate the probability distribution of a particle in a given state.",
+                    "To determine the mass of a particle in a given state.",
+                    "To measure the velocity of a particle in a given state.",
+                    "To analyze the charge of a particle in a given state."
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the concept of superposition in quantum mechanics?",
+                "options": [
+                    "A particle can exist in multiple states simultaneously until measured.",
+                    "A particle can only exist in one state at a time.",
+                    "A particle's state is determined by its surroundings.",
+                    "A particle's state is fixed and unchangeable."
+                ],
+                "answer": 2,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "General Knowledge",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "syllabus": [
+            "The concept of wave-particle duality, where particles like electrons show both wave-like and particle-like behaviors.",
+            "Heisenberg’s uncertainty principle, stating that the exact position and momentum of a particle cannot both be known simultaneously.",
+            "The Schrödinger equation, which governs how quantum systems evolve over time.",
+            "The principle of quantum superposition, where systems can exist in multiple states at once until measured.",
+            "Quantum tunneling, a phenomenon where particles pass through barriers that would be impossible in classical mechanics.",
+            "Quantum entanglement, where particles are interconnected, and the state of one influences the state of another instantly, regardless of distance.",
+            "The concept of eigenstates and eigenvalues, related to quantized states and the corresponding measurable values of a system.",
+            "Pauli's exclusion principle, explaining that no two identical fermions can occupy the same quantum state.",
+            "The Copenhagen interpretation, focusing on the idea that the wavefunction collapses upon observation or measurement.",
+            "The role of spin and angular momentum, key features in describing quantum particles and their behavior."
+        ],
+        "questions": [
+            {
+                "question": "What is the capital of France?",
+                "options": [
+                    "Berlin",
+                    "London",
+                    "Paris",
+                    "Madrid"
+                ],
+                "answer": 2,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Who wrote the play 'Romeo and Juliet'?",
+                "options": [
+                    "William Shakespeare",
+                    "Jane Austen",
+                    "Charles Dickens",
+                    "Mark Twain"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the largest mammal in the world?",
+                "options": [
+                    "Elephant",
+                    "Blue Whale",
+                    "Giraffe",
+                    "Hippopotamus"
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Which planet is known as the 'Red Planet'?",
+                "options": [
+                    "Venus",
+                    "Mars",
+                    "Jupiter",
+                    "Saturn"
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Who painted the Mona Lisa?",
+                "options": [
+                    "Leonardo da Vinci",
+                    "Vincent van Gogh",
+                    "Pablo Picasso",
+                    "Michelangelo"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Computer Science",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "syllabus": [
+            "The concept of wave-particle duality, where particles like electrons show both wave-like and particle-like behaviors.",
+            "Heisenberg’s uncertainty principle, stating that the exact position and momentum of a particle cannot both be known simultaneously.",
+            "The Schrödinger equation, which governs how quantum systems evolve over time.",
+            "The principle of quantum superposition, where systems can exist in multiple states at once until measured.",
+            "Quantum tunneling, a phenomenon where particles pass through barriers that would be impossible in classical mechanics.",
+            "Quantum entanglement, where particles are interconnected, and the state of one influences the state of another instantly, regardless of distance.",
+            "The concept of eigenstates and eigenvalues, related to quantized states and the corresponding measurable values of a system.",
+            "Pauli's exclusion principle, explaining that no two identical fermions can occupy the same quantum state.",
+            "The Copenhagen interpretation, focusing on the idea that the wavefunction collapses upon observation or measurement.",
+            "The role of spin and angular momentum, key features in describing quantum particles and their behavior."
+        ],
+        "questions": [
+            {
+                "question": "What is the primary function of an operating system?",
+                "options": [
+                    "To manage hardware resources",
+                    "To create software applications",
+                    "To design computer networks",
+                    "To develop programming languages"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the purpose of a compiler in programming?",
+                "options": [
+                    "To convert source code into machine code",
+                    "To execute the program",
+                    "To debug the program",
+                    "To store data in memory"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the difference between a stack and a queue in data structures?",
+                "options": [
+                    "Stack follows LIFO (Last In First Out) principle, while queue follows FIFO (First In First Out) principle.",
+                    "Stack follows FIFO (First In First Out) principle, while queue follows LIFO (Last In First Out) principle.",
+                    "Stack and queue are the same data structure with different names.",
+                    "Stack and queue are used interchangeably in programming."
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the purpose of object-oriented programming?",
+                "options": [
+                    "To model real-world entities using objects and classes",
+                    "To perform mathematical calculations",
+                    "To create graphical user interfaces",
+                    "To manage database operations"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the role of a database management system (DBMS) in software development?",
+                "options": [
+                    "To store, retrieve, and manage data efficiently",
+                    "To design user interfaces",
+                    "To write algorithms for sorting data",
+                    "To compile source code into machine code"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Classical Mechanics",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "Who is considered the father of quantum mechanics?",
+                "options": [
+                    "Albert Einstein",
+                    "Niels Bohr",
+                    "Werner Heisenberg",
+                    "Max Planck"
+                ],
+                "answer": 3,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the smallest indivisible unit of light called?",
+                "options": [
+                    "Photon",
+                    "Electron",
+                    "Proton",
+                    "Neutron"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the uncertainty principle in quantum mechanics?",
+                "options": [
+                    "The position and momentum of a particle cannot be precisely determined simultaneously.",
+                    "The energy and time of a particle cannot be precisely determined simultaneously.",
+                    "The spin and charge of a particle cannot be precisely determined simultaneously.",
+                    "The mass and velocity of a particle cannot be precisely determined simultaneously."
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the Schrödinger equation used for in quantum mechanics?",
+                "options": [
+                    "To calculate the probability distribution of a particle in a given state.",
+                    "To determine the mass of a particle in a given state.",
+                    "To measure the velocity of a particle in a given state.",
+                    "To analyze the charge of a particle in a given state."
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the concept of superposition in quantum mechanics?",
+                "options": [
+                    "A particle can exist in multiple states simultaneously until measured.",
+                    "A particle can only exist in one state at a time.",
+                    "A particle's state is determined by its surroundings.",
+                    "A particle's state is fixed and unchangeable."
+                ],
+                "answer": 2,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Optics",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "What is the capital of France?",
+                "options": [
+                    "Berlin",
+                    "London",
+                    "Paris",
+                    "Madrid"
+                ],
+                "answer": 2,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Who wrote the play 'Romeo and Juliet'?",
+                "options": [
+                    "William Shakespeare",
+                    "Jane Austen",
+                    "Charles Dickens",
+                    "Mark Twain"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the largest mammal in the world?",
+                "options": [
+                    "Elephant",
+                    "Blue Whale",
+                    "Giraffe",
+                    "Hippopotamus"
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Which planet is known as the 'Red Planet'?",
+                "options": [
+                    "Venus",
+                    "Mars",
+                    "Jupiter",
+                    "Saturn"
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Who painted the Mona Lisa?",
+                "options": [
+                    "Leonardo da Vinci",
+                    "Vincent van Gogh",
+                    "Pablo Picasso",
+                    "Michelangelo"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "name": "Mixture",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "What is the primary function of an operating system?",
+                "options": [
+                    "To manage hardware resources",
+                    "To create software applications",
+                    "To design computer networks",
+                    "To develop programming languages"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the purpose of a compiler in programming?",
+                "options": [
+                    "To convert source code into machine code",
+                    "To execute the program",
+                    "To debug the program",
+                    "To store data in memory"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the difference between a stack and a queue in data structures?",
+                "options": [
+                    "Stack follows LIFO (Last In First Out) principle, while queue follows FIFO (First In First Out) principle.",
+                    "Stack follows FIFO (First In First Out) principle, while queue follows LIFO (Last In First Out) principle.",
+                    "Stack and queue are the same data structure with different names.",
+                    "Stack and queue are used interchangeably in programming."
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the purpose of object-oriented programming?",
+                "options": [
+                    "To model real-world entities using objects and classes",
+                    "To perform mathematical calculations",
+                    "To create graphical user interfaces",
+                    "To manage database operations"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the role of a database management system (DBMS) in software development?",
+                "options": [
+                    "To store, retrieve, and manage data efficiently",
+                    "To design user interfaces",
+                    "To write algorithms for sorting data",
+                    "To compile source code into machine code"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "name": "Quantum Mechanics",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "Who is considered the father of quantum mechanics?",
+                "options": [
+                    "Albert Einstein",
+                    "Niels Bohr",
+                    "Werner Heisenberg",
+                    "Max Planck"
+                ],
+                "answer": 3,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the smallest indivisible unit of light called?",
+                "options": [
+                    "Photon",
+                    "Electron",
+                    "Proton",
+                    "Neutron"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the uncertainty principle in quantum mechanics?",
+                "options": [
+                    "The position and momentum of a particle cannot be precisely determined simultaneously.",
+                    "The energy and time of a particle cannot be precisely determined simultaneously.",
+                    "The spin and charge of a particle cannot be precisely determined simultaneously.",
+                    "The mass and velocity of a particle cannot be precisely determined simultaneously."
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the Schrödinger equation used for in quantum mechanics?",
+                "options": [
+                    "To calculate the probability distribution of a particle in a given state.",
+                    "To determine the mass of a particle in a given state.",
+                    "To measure the velocity of a particle in a given state.",
+                    "To analyze the charge of a particle in a given state."
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the concept of superposition in quantum mechanics?",
+                "options": [
+                    "A particle can exist in multiple states simultaneously until measured.",
+                    "A particle can only exist in one state at a time.",
+                    "A particle's state is determined by its surroundings.",
+                    "A particle's state is fixed and unchangeable."
+                ],
+                "answer": 2,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "name": "General Knowledge",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "What is the capital of France?",
+                "options": [
+                    "Berlin",
+                    "London",
+                    "Paris",
+                    "Madrid"
+                ],
+                "answer": 2,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Who wrote the play 'Romeo and Juliet'?",
+                "options": [
+                    "William Shakespeare",
+                    "Jane Austen",
+                    "Charles Dickens",
+                    "Mark Twain"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the largest mammal in the world?",
+                "options": [
+                    "Elephant",
+                    "Blue Whale",
+                    "Giraffe",
+                    "Hippopotamus"
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Which planet is known as the 'Red Planet'?",
+                "options": [
+                    "Venus",
+                    "Mars",
+                    "Jupiter",
+                    "Saturn"
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Who painted the Mona Lisa?",
+                "options": [
+                    "Leonardo da Vinci",
+                    "Vincent van Gogh",
+                    "Pablo Picasso",
+                    "Michelangelo"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "name": "Computer Science",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "What is the primary function of an operating system?",
+                "options": [
+                    "To manage hardware resources",
+                    "To create software applications",
+                    "To design computer networks",
+                    "To develop programming languages"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the purpose of a compiler in programming?",
+                "options": [
+                    "To convert source code into machine code",
+                    "To execute the program",
+                    "To debug the program",
+                    "To store data in memory"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the difference between a stack and a queue in data structures?",
+                "options": [
+                    "Stack follows LIFO (Last In First Out) principle, while queue follows FIFO (First In First Out) principle.",
+                    "Stack follows FIFO (First In First Out) principle, while queue follows LIFO (Last In First Out) principle.",
+                    "Stack and queue are the same data structure with different names.",
+                    "Stack and queue are used interchangeably in programming."
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the purpose of object-oriented programming?",
+                "options": [
+                    "To model real-world entities using objects and classes",
+                    "To perform mathematical calculations",
+                    "To create graphical user interfaces",
+                    "To manage database operations"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the role of a database management system (DBMS) in software development?",
+                "options": [
+                    "To store, retrieve, and manage data efficiently",
+                    "To design user interfaces",
+                    "To write algorithms for sorting data",
+                    "To compile source code into machine code"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "name": "Quantum Mechanics",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "Who is considered the father of quantum mechanics?",
+                "options": [
+                    "Albert Einstein",
+                    "Niels Bohr",
+                    "Werner Heisenberg",
+                    "Max Planck"
+                ],
+                "answer": 3,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the smallest indivisible unit of light called?",
+                "options": [
+                    "Photon",
+                    "Electron",
+                    "Proton",
+                    "Neutron"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the uncertainty principle in quantum mechanics?",
+                "options": [
+                    "The position and momentum of a particle cannot be precisely determined simultaneously.",
+                    "The energy and time of a particle cannot be precisely determined simultaneously.",
+                    "The spin and charge of a particle cannot be precisely determined simultaneously.",
+                    "The mass and velocity of a particle cannot be precisely determined simultaneously."
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the Schrödinger equation used for in quantum mechanics?",
+                "options": [
+                    "To calculate the probability distribution of a particle in a given state.",
+                    "To determine the mass of a particle in a given state.",
+                    "To measure the velocity of a particle in a given state.",
+                    "To analyze the charge of a particle in a given state."
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the concept of superposition in quantum mechanics?",
+                "options": [
+                    "A particle can exist in multiple states simultaneously until measured.",
+                    "A particle can only exist in one state at a time.",
+                    "A particle's state is determined by its surroundings.",
+                    "A particle's state is fixed and unchangeable."
+                ],
+                "answer": 2,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "name": "General Knowledge",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "What is the capital of France?",
+                "options": [
+                    "Berlin",
+                    "London",
+                    "Paris",
+                    "Madrid"
+                ],
+                "answer": 2,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Who wrote the play 'Romeo and Juliet'?",
+                "options": [
+                    "William Shakespeare",
+                    "Jane Austen",
+                    "Charles Dickens",
+                    "Mark Twain"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the largest mammal in the world?",
+                "options": [
+                    "Elephant",
+                    "Blue Whale",
+                    "Giraffe",
+                    "Hippopotamus"
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Which planet is known as the 'Red Planet'?",
+                "options": [
+                    "Venus",
+                    "Mars",
+                    "Jupiter",
+                    "Saturn"
+                ],
+                "answer": 1,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "Who painted the Mona Lisa?",
+                "options": [
+                    "Leonardo da Vinci",
+                    "Vincent van Gogh",
+                    "Pablo Picasso",
+                    "Michelangelo"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "avg_rating": 4.5,
+        "date_created": "2023-02-20T14:30:00.000Z",
+        "is_available": true,
+        "time": 10,
+        "name": "Computer Science",
+        "instructions": [
+            "Read each question carefully before selecting your answer.",
+            "There is no negative marking, so attempt all questions.",
+            "Ensure a stable internet connection to avoid disruptions.",
+            "You will have limited time to complete the quiz, so manage your time wisely.",
+            "Once an answer is submitted, you cannot change it.",
+            "Do not refresh or close the quiz window during the session.",
+            "Make sure to submit the quiz before the timer runs out.",
+            "Use only one device to avoid any synchronization issues.",
+            "Stay focused, and avoid distractions while taking the quiz.",
+            "If you encounter any technical issues, contact support immediately."
+        ],
+        "questions": [
+            {
+                "question": "What is the primary function of an operating system?",
+                "options": [
+                    "To manage hardware resources",
+                    "To create software applications",
+                    "To design computer networks",
+                    "To develop programming languages"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the purpose of a compiler in programming?",
+                "options": [
+                    "To convert source code into machine code",
+                    "To execute the program",
+                    "To debug the program",
+                    "To store data in memory"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the difference between a stack and a queue in data structures?",
+                "options": [
+                    "Stack follows LIFO (Last In First Out) principle, while queue follows FIFO (First In First Out) principle.",
+                    "Stack follows FIFO (First In First Out) principle, while queue follows LIFO (Last In First Out) principle.",
+                    "Stack and queue are the same data structure with different names.",
+                    "Stack and queue are used interchangeably in programming."
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the purpose of object-oriented programming?",
+                "options": [
+                    "To model real-world entities using objects and classes",
+                    "To perform mathematical calculations",
+                    "To create graphical user interfaces",
+                    "To manage database operations"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            },
+            {
+                "question": "What is the role of a database management system (DBMS) in software development?",
+                "options": [
+                    "To store, retrieve, and manage data efficiently",
+                    "To design user interfaces",
+                    "To write algorithms for sorting data",
+                    "To compile source code into machine code"
+                ],
+                "answer": 0,
+                "is_required": true,
+                "img": ""
+            }
+        ]
+    }
+]

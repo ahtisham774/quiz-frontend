@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+html{
+    
+    scroll-behavior: smooth;
+    scrollbar-color: #FFCC2C transparent;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    min-height: 100vh;
+    height: 100dvh;
+
+    
+}
+#root{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+.show_popup{
+    animation : show_popup 0.1s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+@keyframes show_popup {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in{
+    animation : animate-fade-in 0.8s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+@keyframes animate-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.6rem;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: white;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.3rem;
+    width: 1.3rem;
+    left: 0.2rem;
+    top: 0.1rem;
+    background-color: #FFCC2C;
+    border-radius: 50px;
+    /* box-shadow: 0 0px 20px rgba(0,0,0,0.4); */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .switch input:checked + .slider {
+    background: #FFCC2C;
+  }
+  
+  .switch input:focus + .slider {
+    box-shadow: 0 0 1px #FFCC2C;
+  }
+  
+  .switch input:checked + .slider:before {
+    transform: translateX(100%);
+    background-color: white;
+    
+  }
+
+
+.jiggle{
+    animation: jiggle 0.5s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+@keyframes jiggle {
+  0%,
+  10%,
+  30%,
+50%,
+70%,
+90% ,
+  100%
+  {
+    transform: translateX(0);
+  }
+  20%,
+  40%,
+  60%,
+  80%
+  {
+    transform: translateX(10px);
+  }
+}
