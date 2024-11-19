@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, useSearchParams, useLocation } from "react-router-dom";
 import BtnOutline from "../components/btnOutline";
-import QuestionCard from "../components/QuestionCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllQuizzes } from "../redux/slices/quiz";
 import { useAuth } from "../context/useAuth";
@@ -9,6 +8,7 @@ import { BASE_URL } from "../API";
 import toast from "react-hot-toast";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import QuestionCard from "../../../quiz/src/components/QuestionCard";
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState(null);
