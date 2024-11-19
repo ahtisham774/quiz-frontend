@@ -8,7 +8,7 @@ import { BASE_URL } from "../API";
 import toast from "react-hot-toast";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
-import QuestionCard from "../../../quiz/src/components/QuestionCard";
+import QuestionCard from "../../../quiz/src/components/questionCard";
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState(null);
