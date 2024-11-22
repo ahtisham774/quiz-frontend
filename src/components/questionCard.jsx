@@ -33,7 +33,7 @@ const QuestionCard = ({
   }
 
   return (
-    <div className='flex flex-col gap-4 w-full'>
+    <div className='flex flex-col gap-4 w-full h-full'>
       <div className='w-full flex items-center flex-col gap-2 justify-center'>
         <h2 className='text-5xl font-semibold'>{name}</h2>
         {isReview && (
@@ -71,7 +71,7 @@ const QuestionCard = ({
               </p>
             )}
           </div>
-          <div className='flex flex-col gap-4 w-full'>
+          <div className='flex flex-col gap-4 w-full h-full'>
             <p className='text-xl'>{question}</p>
             {img && (
               <div className='flex items-center justify-center md:w-1/3 md:h-1/2'>
@@ -82,7 +82,7 @@ const QuestionCard = ({
                 />
               </div>
             )}
-            <div className='flex items-start justify-between  flex-col md:flex-row gap-8 w-full'>
+            <div className='flex items-start justify-between h-full  flex-col md:flex-row gap-8 w-full'>
               <div className='flex flex-col gap-4 flex-1 w-full md:max-w-xl md:min-w-max 2xl:max-w-3xl'>
                 {options.map((option, index) => (
                   <button
@@ -107,10 +107,12 @@ const QuestionCard = ({
                     </div>
                   </button>
                 ))}
+              
+
                 {children}
               </div>
 
-              <div className='flex flex-col  gap-3 w-full md:max-w-sm 2xl:max-w-xl'>
+              <div className='flex flex-col justify-between h-full gap-3 w-full md:max-w-sm 2xl:max-w-xl'>
                 {hint != '' &&
                   hint != undefined &&
                   isReview &&
@@ -135,6 +137,14 @@ const QuestionCard = ({
                     ></textarea>
                   </div>
                 )}
+                {!isReview && (
+                  <Link
+                    to='/dashboard'
+                    className='py-2.5 px-6 w-fit self-end  bg-primary text-xl font-bold text-white'
+                  >
+                    Back to Home
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -147,7 +157,9 @@ const QuestionCard = ({
               >
                 {selectedOption === answer
                   ? `Your answer ${alphabets[selectedOption]} is correct!`
-                  : `Your answer ${alphabets[selectedOption]} is incorrect! Correct answer is ${alphabets[answer]}`}
+                  : selectedOption != -1 ? `Your answer ${alphabets[selectedOption]} is incorrect! The correct answer is ${alphabets[answer]}`
+                  : `The correct answer is ${alphabets[answer]}`
+                }
               </p>
             </div>
           )}

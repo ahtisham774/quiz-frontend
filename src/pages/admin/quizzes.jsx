@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteSingleQuiz, fetchAllQuizzes, updateQuizAvailability } from "../../redux/slices/quiz";
 import toast from "react-hot-toast";
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 5;
 
 const Quizzes = () => {
     const navigate = useNavigate();

@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteSingleLog, fetchAllLogs } from "../../redux/slices/logs";
 import toast from "react-hot-toast";
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 5;
 
 const Logs = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -113,7 +113,7 @@ const Logs = () => {
                                     <td className="p-3 text-xl font-normal ">{startIdx + index + 1}</td>
                                     <td className="p-3 text-xl font-normal capitalize">{log?.studentId?.firstName + " " + log?.studentId?.lastName}</td>
 
-                                    <td className="p-3 text-xl font-normal ">{log?.quizId?.name}</td>
+                                    <td className="p-3 text-xl font-normal whites">{log?.quizId?.name}</td>
                                     <td className="p-3 text-xl font-normal ">
                                         {new Date(log?.date_created).toLocaleDateString("en-US", {
                                             hour: "numeric",

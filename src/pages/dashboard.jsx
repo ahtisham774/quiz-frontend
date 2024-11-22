@@ -64,13 +64,13 @@ const Dashboard = () => {
                             </div>
                                 :
                                 <>
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                                    <div className="flex flex-col gap-5">
                                         {
                                             quizzes?.slice(0, visibleCount)?.map((quiz, index) => {
                                                 return (
                                                     <Link to={`quiz/${quiz._id}`}
                                                         key={index}
-                                                        className={`bg-white shadow-md p-4 sm:p-8 sm:py-16 border-2  border-primary flex items-center justify-center   animate-fade-in`}
+                                                        className={`bg-white w-fit  flex items-center justify-center   animate-fade-in`}
                                                         style={{ opacity: 1 }}
                                                     >
                                                         <h1 className="text-2xl font-semibold text-center">{quiz.name}</h1>
