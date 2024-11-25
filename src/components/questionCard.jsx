@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import TimeLeft from './timeLeft'
+import { URI } from '../API'
 
 const QuestionCard = ({
   isReview,
@@ -76,7 +77,7 @@ const QuestionCard = ({
             {img && (
               <div className='flex items-center justify-center md:w-1/3 md:h-1/2'>
                 <img
-                  src={img}
+                  src={URI+img}
                   alt=''
                   className='max-w-full h-full object-cover'
                 />

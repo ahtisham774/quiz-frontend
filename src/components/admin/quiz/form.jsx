@@ -393,7 +393,7 @@ const Form = ({ subTitle, quiz, handleSubmit }) => {
                       />
                     ) : (
                       <img
-                        src={`${question.img}`}
+                        src={`${URI+ question.img}`}
                         alt='Uploaded Image'
                         className='w-full h-full object-cover'
                       />
