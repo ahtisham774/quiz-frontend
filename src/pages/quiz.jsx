@@ -47,18 +47,21 @@ const Quiz = () => {
 
   useEffect(() => {
     if (id && data.length > 0) {
-      // Only runs when data is populated
-      const quizData = data.find(q => q._id === id)
-      if (quizData) {
-        setQuiz(quizData)
-        const questionIndexFromQuery = parseInt(searchParams.get('q')) || 0
+        // Find the quiz by ID
+        const quizData = data.find(q => q._id === id);
+        if (quizData) {
+            // Filter questions where is_hide is false
+            const filteredQuestions = quizData.questions.filter(q => !q.is_hide);
+            setQuiz({ ...quizData, questions: filteredQuestions });
 
-        setCurrentQuestionIndex(questionIndexFromQuery)
-      } else {
-        console.warn('Quiz not found for the given id')
-      }
+            // Get the question index from query parameters
+            const questionIndexFromQuery = parseInt(searchParams.get('q')) || 0;
+            setCurrentQuestionIndex(questionIndexFromQuery);
+        } else {
+            console.warn('Quiz not found for the given id');
+        }
     }
-  }, [id, data, searchParams])
+}, [id, data, searchParams]);
 
   useEffect(() => {
     if (
