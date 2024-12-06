@@ -23,9 +23,9 @@ const Quiz = () => {
   const [isChecked, setIsChecked] = useState(false)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [selectedOption, setSelectedOption] = useState(null)
-  const [state, setState] = useState('')
   const { user } = useAuth()
   const [iDontKnow, setIDontKnow] = useState(true)
+  const [state, setState] = useState(user.role == "student" ? '' : 'start')
   const [open, setOpen] = useState(false)
 
   const [answers, setAnswers] = useState([])
@@ -39,6 +39,7 @@ const Quiz = () => {
   const { quizzes: data } = useSelector(state => state.quiz)
   const dispatch = useDispatch()
   const [isNotSelect, setIsNotSelect] = useState(true)
+
 
   useEffect(() => {
     // Dispatch fetchQuizzes action on component mount
@@ -65,8 +66,9 @@ const Quiz = () => {
 
   useEffect(() => {
     if (
-      searchParams.get('state') == 'feedback' ||
-      searchParams.get('state') == 'review'
+      user.role == "student" &&
+     ( searchParams.get('state') == 'feedback' ||
+      searchParams.get('state') == 'review')
     ) {
       try {
         fetch(`${BASE_URL}/result/get-results`, {
@@ -147,10 +149,10 @@ const Quiz = () => {
 
     // Student name and date
     doc.setFontSize(12)
-    doc.text(`Student: ${user?.username || 'N/A'}`, 20, 40)
+   if (user && user.role == "student") doc.text(`Student: ${user?.username || 'N/A'}`, 20, 40)
     doc.text(`Quiz: ${quiz?.name || 'N/A'}`, 20, 50)
     doc.text(
-      `Date: ${new Date(quiz?.date_created).toLocaleDateString('en-US', {
+      `Date: ${new Date().toLocaleDateString('en-US', {
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
@@ -196,7 +198,7 @@ const Quiz = () => {
   }
 
   const showResults = () => {
-    if (user && searchParams.get('state') == 'start') {
+    if (user && user.role == "student" && searchParams.get('state') == 'start') {
       const studentId = user._id
       const quizId = quiz._id
 
@@ -296,7 +298,7 @@ const Quiz = () => {
               selectedOption={selectedOption}
               alphabets={alphabets}
               showTimer={true}
-              timer={user ? quiz?.time : 0}
+              timer={(user && user.role == "student") ? quiz?.time : 0}
               notes={quiz?.notes}
               score={score}
               handleSelectOption={handleSelectOption}
@@ -426,13 +428,13 @@ const Quiz = () => {
                             <BtnOutline text="feedBack" handleClick={() => Navigate('feedback')} />} */}
             </div>
           </div>
-        ) : state == 'review' ? (
+        ) : state == 'review'  ? (
           <>
             <QuestionCard
               isReview={true}
               handleShowButtons={setShowButtons}
-              name={quiz.name}
-              hint={quiz.questions[currentQuestionIndex]?.hint}
+              name={quiz?.name}
+              hint={quiz?.questions[currentQuestionIndex]?.hint}
               notes={quiz?.notes || notes}
               index={currentQuestionIndex}
               syllabus={quiz.syllabus}

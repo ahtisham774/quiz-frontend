@@ -80,6 +80,7 @@ function App() {
                     <Route index element={<Quizzes />} />
                     <Route path="create" element={<CreateQuiz />} />
                     <Route path="edit/:id" element={<EditQuiz />} />
+                    <Route path="view/:id" element={<Quiz />} />
                   </Route>
                   <Route path="logs" element={<Outlet />} >
                     <Route index element={<Logs />} />
