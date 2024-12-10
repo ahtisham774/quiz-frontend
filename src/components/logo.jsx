@@ -1,7 +1,7 @@
 
 const Logo = () => {
   return (
-        <h1 className="uppercase font-bold text-4xl text-primary">LOGO</h1>
+        <h1 className="uppercase font-bold text-4xl text-primary">MY-Science</h1>
   )
 }
 
