@@ -6,6 +6,7 @@ import useLocalStorage from "./useLocalStorage";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../../logo";
 import { useAuth } from "../../../../context/useAuth";
+import { FaUsers } from "react-icons/fa";
 
 const menuGroups = [
     {
@@ -23,6 +24,13 @@ const menuGroups = [
         ,
         name: "Quizzes",
         route: "quizzes",
+
+    },
+    {
+        icon: <FaUsers className="text-primary " size={25}/>
+        ,
+        name: "Students",
+        route: "students",
 
     },
     {

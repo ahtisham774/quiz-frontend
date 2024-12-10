@@ -4,9 +4,9 @@ import { fetchQuizzes, postQuiz, putQuiz, deleteQuiz, updateAvailability, fetchG
 // Fetch all quizzes
 export const fetchAllQuizzes = createAsyncThunk(
     'quiz/fetchQuizzes',
-    async (_, { rejectWithValue }) => {
+    async (topic, { rejectWithValue }) => {
         try {
-            return await fetchQuizzes();
+            return await fetchQuizzes(topic);
         } catch (error) {
             return rejectWithValue(error.message);
         }
@@ -14,9 +14,9 @@ export const fetchAllQuizzes = createAsyncThunk(
 );
 export const fetchGuestQuizzes = createAsyncThunk(
     'quiz/fetchGuestQuizzes',
-    async (_, { rejectWithValue }) => {
+    async (topic, { rejectWithValue }) => {
         try {
-            return await fetchGuestQuiz();
+            return await fetchGuestQuiz(topic);
         } catch (error) {
             return rejectWithValue(error.message);
         }

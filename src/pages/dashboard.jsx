@@ -2,27 +2,55 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { fetchAllQuizzes, fetchGuestQuizzes } from "../redux/slices/quiz";
+import { BASE_URL } from "../API";
+import { useAuth } from "../context/useAuth";
+import Select from "react-select";
 
 const Dashboard = () => {
     const [quizzes, setQuizzes] = useState([]);
 
     const [error, setError] = useState(null);
+    const {user} = useAuth()
     const [visibleCount, setVisibleCount] = useState(6); // State to control number of visible cards
     const { quizzes: data, loading } = useSelector(state => state.quiz);
     const dispatch = useDispatch();
     const pathname = useLocation().pathname;
-
+    const [topics, setTopics] = useState([]);
+    const [selectedTopic, setSelectedTopic] = useState({ value: "", label: "All Topics" });
+    useEffect(() => {
+        const fetchOptions = async () => {
+          try {
+            const response = await fetch(`${BASE_URL}/topics/all`);
+            if (response.ok) {
+              const data = await response.json();
+              setTopics(
+                data.map((topic) => ({
+                  value: topic._id,
+                  label: topic.name,
+                }))
+            ); // Normalize data format
+            
+            } else {
+              console.error("Failed to fetch options");
+            }
+          } catch (error) {
+            console.error("Error fetching options:", error);
+          }
+        };
+    
+        fetchOptions();
+      }, []);
 
     useEffect(() => {
         // Dispatch fetchQuizzes action on component mount
         if (pathname === '/guest-mode') {
-            dispatch(fetchGuestQuizzes());
+            dispatch(fetchGuestQuizzes(selectedTopic?.value || null));
         }
         else {
 
-            dispatch(fetchAllQuizzes());
+            dispatch(fetchAllQuizzes(selectedTopic?.value || null));
         }
-    }, [dispatch]);
+    }, [selectedTopic?.value, dispatch, pathname]);
 
     useEffect(() => {
         // show the quizzes with the is_available flag set to true
@@ -51,6 +79,20 @@ const Dashboard = () => {
                     <p className="text-[#999999] text-xl">Choose any topic and start quiz</p>
                 </div>
                 {
+                                            user && (
+                                                <div className="flex items-center justify-center w-full">
+                                                    <Select
+                                                    isClearable
+                                                        options={topics}
+                                                        value={selectedTopic}
+                                                        onChange={setSelectedTopic}
+                                                        placeholder="Select Topic"
+                                                        className="w-full"
+                                                    />
+                                                </div>
+                                            )
+                                        }
+                {
 
                     loading ? <div className="flex items-center justify-center">
                         <p className="text-2xl font-semibold">Loading...</p>
@@ -64,7 +106,8 @@ const Dashboard = () => {
                             </div>
                                 :
                                 <>
-                                    <div className="flex flex-col gap-5">
+                                    <div className="flex flex-col gap-5 w-full">
+                                       
                                         {
                                             quizzes?.slice(0, visibleCount)?.map((quiz, index) => {
                                                 return (

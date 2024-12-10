@@ -16,10 +16,10 @@ const Navbar = () => {
   
 
   const links = [
-    { name: "Home", url: "/dashboard" },
+    { name: "Home", url: user? "/dashboard": "/" },
     user?.role == "student" ? { name: "My Quizzes", url: "/dashboard/my-quizzes" } :
       { name: "Features", url: "/" },
-    { name: "About Us", url: "/" }
+    { name: "About Us", url: "/about" }
   ];
 
   const toggleSidebar = () => {

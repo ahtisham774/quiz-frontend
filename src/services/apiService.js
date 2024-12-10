@@ -7,17 +7,17 @@ const GetHeaders = (type) => getAuthHeaders({ type });
 const quiz = '/quiz'
 
 // Fetch all quizzes
-export const fetchQuizzes = async () => {
+export const fetchQuizzes = async (topic) => {
 
-    const response = await fetch(`${BASE_URL}${quiz}/all`, {
+    const response = await fetch(`${BASE_URL}${quiz}/all?topic=${topic}`, {
         method: "GET",
     });
     if (!response.ok) throw new Error(`Error: ${response.status}`);
     return await response.json();
 };
-export const fetchGuestQuiz = async () => {
+export const fetchGuestQuiz = async (topic) => {
 
-    const response = await fetch(`${BASE_URL}${quiz}/guest`, {
+    const response = await fetch(`${BASE_URL}${quiz}/guest?topic=${topic}`, {
         method: "GET",
     });
     if (!response.ok) throw new Error(`Error: ${response.status}`);

@@ -1,12 +1,5 @@
 import { useEffect, useState } from 'react'
-import {
-  useParams,
-  useNavigate,
-  useSearchParams,
-  useLocation,
-  Link
-} from 'react-router-dom'
-import BtnOutline from '../components/btnOutline'
+import { useParams, useSearchParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllQuizzes } from '../redux/slices/quiz'
 import { useAuth } from '../context/useAuth'
@@ -25,7 +18,7 @@ const Quiz = () => {
   const [selectedOption, setSelectedOption] = useState(null)
   const { user } = useAuth()
   const [iDontKnow, setIDontKnow] = useState(true)
-  const [state, setState] = useState(user.role == "student" ? '' : 'start')
+  const [state, setState] = useState(user?.role == 'student' ? '' : 'start')
   const [open, setOpen] = useState(false)
 
   const [answers, setAnswers] = useState([])
@@ -39,7 +32,7 @@ const Quiz = () => {
   const { quizzes: data } = useSelector(state => state.quiz)
   const dispatch = useDispatch()
   const [isNotSelect, setIsNotSelect] = useState(true)
-
+  const [isLessThanHalf, setIsLessThanHalf] = useState(false)
 
   useEffect(() => {
     // Dispatch fetchQuizzes action on component mount
@@ -48,27 +41,38 @@ const Quiz = () => {
 
   useEffect(() => {
     if (id && data.length > 0) {
-        // Find the quiz by ID
-        const quizData = data.find(q => q._id === id);
-        if (quizData) {
-            // Filter questions where is_hide is false
-            const filteredQuestions = quizData.questions.filter(q => !q.is_hide);
-            setQuiz({ ...quizData, questions: filteredQuestions });
+      // Find the quiz by ID
+      const quizData = data.find(q => q._id === id)
+      if (quizData) {
+        // Filter questions where is_hide is false
+        const filteredQuestions = quizData.questions.filter(q => !q.is_hide)
+        setQuiz({ ...quizData, questions: filteredQuestions })
 
-            // Get the question index from query parameters
-            const questionIndexFromQuery = parseInt(searchParams.get('q')) || 0;
-            setCurrentQuestionIndex(questionIndexFromQuery);
-        } else {
-            console.warn('Quiz not found for the given id');
-        }
+        // Get the question index from query parameters
+        const questionIndexFromQuery = parseInt(searchParams.get('q')) || 0
+        setCurrentQuestionIndex(questionIndexFromQuery)
+      } else {
+        console.warn('Quiz not found for the given id')
+      }
     }
-}, [id, data, searchParams]);
+  }, [id, data, searchParams])
+
+
+  useEffect(()=>{
+    console.log("Is Less Than Half",isLessThanHalf)
+  },[isLessThanHalf])
+
+  useEffect(() => {
+    if(!user){
+      setIsLessThanHalf(currentQuestionIndex >= 0.6 * quiz?.questions?.length)
+    }
+  }, [currentQuestionIndex, quiz?.questions, user, searchParams])
 
   useEffect(() => {
     if (
-      user.role == "student" &&
-     ( searchParams.get('state') == 'feedback' ||
-      searchParams.get('state') == 'review')
+      user?.role == 'student' &&
+      (searchParams.get('state') == 'feedback' ||
+        searchParams.get('state') == 'review')
     ) {
       try {
         fetch(`${BASE_URL}/result/get-results`, {
@@ -111,10 +115,14 @@ const Quiz = () => {
   }
 
   const handleNextQuestion = () => {
-    
     if (selectedOption == null && !iDontKnow) {
       setIsNotSelect(false)
       return
+    }
+
+    if (isLessThanHalf) {
+      showResults()
+      return;
     }
 
     if (currentQuestionIndex < quiz?.questions?.length - 1) {
@@ -149,7 +157,8 @@ const Quiz = () => {
 
     // Student name and date
     doc.setFontSize(12)
-   if (user && user.role == "student") doc.text(`Student: ${user?.username || 'N/A'}`, 20, 40)
+    if (user && user.role == 'student')
+      doc.text(`Student: ${user?.username || 'N/A'}`, 20, 40)
     doc.text(`Quiz: ${quiz?.name || 'N/A'}`, 20, 50)
     doc.text(
       `Date: ${new Date().toLocaleDateString('en-US', {
@@ -179,7 +188,6 @@ const Quiz = () => {
     setTimeout(() => setOpen(false), 1000)
   }
   const handleSelectOption = option => {
-
     setIsNotSelect(true)
     const currentQuestion = quiz.questions[currentQuestionIndex]
 
@@ -198,7 +206,11 @@ const Quiz = () => {
   }
 
   const showResults = () => {
-    if (user && user.role == "student" && searchParams.get('state') == 'start') {
+    if (
+      user &&
+      user.role == 'student' &&
+      searchParams.get('state') == 'start'
+    ) {
       const studentId = user._id
       const quizId = quiz._id
 
@@ -298,7 +310,7 @@ const Quiz = () => {
               selectedOption={selectedOption}
               alphabets={alphabets}
               showTimer={true}
-              timer={(user && user.role == "student") ? quiz?.time : 0}
+              timer={user && user.role == 'student' ? quiz?.time : 0}
               notes={quiz?.notes}
               score={score}
               handleSelectOption={handleSelectOption}
@@ -326,7 +338,7 @@ const Quiz = () => {
                     className='py-2.5 px-6 bg-primary text-xl font-bold text-white '
                     onClick={handleNextQuestion}
                   >
-                    {currentQuestionIndex === quiz.questions.length - 1
+                    {isLessThanHalf || (currentQuestionIndex === quiz.questions.length - 1)
                       ? 'Submit'
                       : 'Next'}
                   </button>
@@ -428,7 +440,7 @@ const Quiz = () => {
                             <BtnOutline text="feedBack" handleClick={() => Navigate('feedback')} />} */}
             </div>
           </div>
-        ) : state == 'review'  ? (
+        ) : state == 'review' ? (
           <>
             <QuestionCard
               isReview={true}

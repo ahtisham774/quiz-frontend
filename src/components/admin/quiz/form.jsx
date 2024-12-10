@@ -5,6 +5,7 @@ import BtnOutline from '../../btnOutline'
 import { IoCloseSharp } from 'react-icons/io5'
 import * as XLSX from 'xlsx'
 import { BASE_URL, URI } from '../../../API'
+import CustomSelect from './select'
 
 const Form = ({ subTitle, quiz, handleSubmit }) => {
   const [formData, setFormData] = useState({
@@ -15,8 +16,10 @@ const Form = ({ subTitle, quiz, handleSubmit }) => {
     is_available: false,
     questions: []
   })
+  const [inputValue, setInputValue] = useState("");
   const [isTimerShow, setIsTimerShow] = useState(false)
   const [isImported, setIsImported] = useState(false)
+ 
 
   useEffect(() => {
     setFormData({
@@ -26,8 +29,10 @@ const Form = ({ subTitle, quiz, handleSubmit }) => {
       time: quiz?.time || '',
       questions: quiz?.questions ? [...quiz.questions] : []
     })
+    
     setIsTimerShow(quiz?.time ? true : false)
   }, [quiz])
+
 
   const handleImportQuestions = event => {
     const file = event.target.files[0]
@@ -126,6 +131,7 @@ const Form = ({ subTitle, quiz, handleSubmit }) => {
     const data = new FormData()
 
     data.append('name', formData.name)
+    data.append('topic', inputValue)
     data.append('syllabus', formData.syllabus)
     data.append('instructions', formData.instructions)
     data.append('time', formData.time)
@@ -172,6 +178,7 @@ const Form = ({ subTitle, quiz, handleSubmit }) => {
             setFormData(prevData => ({ ...prevData, name: e.target.value }))
           }
         />
+          <CustomSelect defaultValue={quiz?.topic?.name || ""} handleValue={setInputValue} />
         <textarea
           id='syllabus'
           className='p-2 px-4 border border-[#999999] rounded-md outline-none resize-none'

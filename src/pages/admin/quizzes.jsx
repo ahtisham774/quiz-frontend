@@ -84,6 +84,7 @@ const Quizzes = () => {
             <tr className='bg-[#FAFAFA] text-left'>
               <th className='p-3 text-xl font-bold'>Sr</th>
               <th className='p-3 text-xl font-bold'>Quiz</th>
+              <th className='p-3 text-xl font-bold'>Topic</th>
               <th className='p-3 text-xl font-bold'>Created Date</th>
               <th className='p-3 text-xl font-bold'>Average Rating</th>
               <th className='p-3 text-xl font-bold'>Available</th>
@@ -103,7 +104,8 @@ const Quizzes = () => {
                   <td className='p-3 text-xl font-normal '>
                     {startIdx + index + 1}
                   </td>
-                  <td className='p-3 text-xl font-normal '>{quiz?.name}</td>
+                  <td className='p-3 text-xl font-normal truncate max-w-[300px]'>{quiz?.name}</td>
+                  <td className='p-3 text-xl font-normal '>{quiz?.topic?.name}</td>
                   <td className='p-3 text-xl font-normal '>
                     {new Date(quiz?.date_created).toLocaleDateString('en-US', {
                       hour: 'numeric',
