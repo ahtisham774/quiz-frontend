@@ -64,7 +64,7 @@ const CustomSelect = ({ defaultValue, handleValue}) => {
       console.error("Error adding option:", error);
     }
   };
-  console.log("InputValue",inputValue)
+ 
   // Delete option via backend API
   const handleDeleteOption = async (optionToDelete) => {
     if (

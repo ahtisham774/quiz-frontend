@@ -201,24 +201,57 @@ const StudentQuizzes = () => {
         </table>
       </div>
 
-      {/* Pagination Controls */}
       {totalPages > 1 && (
-        <div className='flex justify-center items-center gap-2 mt-4'>
-          {Array.from({ length: totalPages }, (_, i) => (
-            <button
-              key={i + 1}
-              onClick={() => handlePageChange(i + 1)}
-              className={`px-3 py-1 rounded-md ${
-                currentPage === i + 1
-                  ? 'bg-primary text-white'
-                  : 'bg-gray-200 text-gray-700'
-              }`}
-            >
-              {i + 1}
-            </button>
-          ))}
-        </div>
-      )}
+  <div className="flex justify-center items-center gap-2 mt-4">
+    {/* Previous Button */}
+    <button
+      onClick={() => handlePageChange(currentPage - 1)}
+      disabled={currentPage === 1}
+      className={`px-3 py-1 rounded-md ${
+        currentPage === 1 ? 'bg-gray-200 text-gray-700' : 'bg-primary text-white'
+      }`}
+    >
+      Previous
+    </button>
+
+    {/* Page Numbers */}
+    {Array.from(
+      { length: Math.min(5, totalPages) }, // Show up to 5 pages (including current, before, and after)
+      (_, i) => {
+        const startPage = Math.max(1, Math.min(currentPage - 2, totalPages - 4)); // Ensure no out-of-bound index
+        const page = startPage + i;
+
+        return (
+          <button
+            key={page}
+            onClick={() => handlePageChange(page)}
+            className={`px-3 py-1 rounded-md ${
+              currentPage === page
+                ? 'bg-primary text-white'
+                : 'bg-gray-200 text-gray-700'
+            }`}
+          >
+            {page}
+          </button>
+        );
+      }
+    )}
+
+    {/* Next Button */}
+    <button
+      onClick={() => handlePageChange(currentPage + 1)}
+      disabled={currentPage === totalPages}
+      className={`px-3 py-1 rounded-md ${
+        currentPage === totalPages
+          ? 'bg-gray-200 text-gray-700'
+          : 'bg-primary text-white'
+      }`}
+    >
+      Next
+    </button>
+  </div>
+)}
+
     </div>
   )
 }

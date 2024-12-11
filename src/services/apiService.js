@@ -9,7 +9,7 @@ const quiz = '/quiz'
 // Fetch all quizzes
 export const fetchQuizzes = async (topic) => {
 
-    const response = await fetch(`${BASE_URL}${quiz}/all?topic=${topic}`, {
+    const response = await fetch(`${BASE_URL}${quiz}/all?topic=${topic || ""}`, {
         method: "GET",
     });
     if (!response.ok) throw new Error(`Error: ${response.status}`);

@@ -73,12 +73,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     }`}
             >
                 {/* <!-- SIDEBAR HEADER --> */}
-                <div className="flex items-center justify-between gap-2 px-6 py-5 lg:py-6">
-                    <Link to="/">
+                    <Link to="/" className="mt-5">
                         <div className="flex items-center gap-2">
-                            <Logo />
+                            <Logo css="!text-3xl"/>
                         </div>
                     </Link>
+                <div className="flex items-center justify-between gap-2 px-6 pb-5 lg:pb-6">
 
                     <button
                         onClick={() => setSidebarOpen(!sidebarOpen)}

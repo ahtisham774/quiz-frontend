@@ -17,7 +17,7 @@ const EditQuiz = () => {
     const navigate = useNavigate();
     useEffect(() => {
         // Dispatch fetchQuizzes action on component mount
-        dispatch(fetchAllQuizzes());
+        dispatch(fetchAllQuizzes(""));
     }, [dispatch]);
 
     useEffect(() => {

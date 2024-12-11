@@ -16,11 +16,18 @@ const Navbar = () => {
   
 
   const links = [
-    { name: "Home", url: user? "/dashboard": "/" },
-    user?.role == "student" ? { name: "My Quizzes", url: "/dashboard/my-quizzes" } :
+    { name: "Home", url: user? user?.role === "admin" ? "/dashboard": "/":"/" },
+    user?.role == "student" ? { name: "Reviews", url: "/dashboard/my-quizzes" } :
       { name: "Features", url: "/" },
+      user?.role == "student" && 
+        { name: "Newsletters", url: "/dashboard/news-letters" },
+      user?.role == "student" && 
+
+        { name: "Solutions", url: "/dashboard/solutions" },
+      
     { name: "About Us", url: "/about" }
-  ];
+  ].filter(Boolean);
+
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -60,7 +67,7 @@ const Navbar = () => {
         <div><Logo /></div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center w-full max-w-3xl justify-between">
+        <div className="hidden lg:flex items-center w-full max-w-4xl justify-between">
           <div className="flex items-center gap-5">
             {links.map((link, index) => (
               <Link key={index} to={link.url} className="mx-4 text-xl font-normal">

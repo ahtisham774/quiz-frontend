@@ -30,6 +30,8 @@ import ResetPassword from './pages/resetPassword'
 import StudentQuizzes from './components/studentQuizzes'
 import About from './pages/about'
 import Students from './pages/admin/students'
+import NewsLetter from './pages/newsLetter'
+import Solutions from './pages/solutions'
 
 function App () {
   const { user } = useAuth()
@@ -96,6 +98,8 @@ function App () {
             ) : user?.role == 'student' ? (
               <Fragment>
                 <Route index element={<Dashboard />} />
+                <Route path='news-letters' element={<NewsLetter />} />
+                <Route path='solutions' element={<Solutions />} />
                 
                 <Route path='my-quizzes' element={<Outlet />}>
                   <Route index element={<StudentQuizzes />} />

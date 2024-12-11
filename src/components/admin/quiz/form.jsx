@@ -16,7 +16,7 @@ const Form = ({ subTitle, quiz, handleSubmit }) => {
     is_available: false,
     questions: []
   })
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(quiz?.topic?._id || '');
   const [isTimerShow, setIsTimerShow] = useState(false)
   const [isImported, setIsImported] = useState(false)
  
