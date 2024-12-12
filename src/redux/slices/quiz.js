@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchQuizzes, postQuiz, putQuiz, deleteQuiz, updateAvailability, fetchGuestQuiz } from "../../services/apiService";
+import { fetchQuizzes, postQuiz, putQuiz, deleteQuiz, updateAvailability, fetchGuestQuiz, updateTry } from "../../services/apiService";
 
 // Fetch all quizzes
 export const fetchAllQuizzes = createAsyncThunk(
@@ -54,6 +54,16 @@ export const updateQuizAvailability = createAsyncThunk(
     async (id, { rejectWithValue }) => {
         try {
             return await updateAvailability(id);
+        } catch (error) {
+            return rejectWithValue(error.message);
+        }
+    }
+);
+export const updateQuizTry = createAsyncThunk(
+    'quiz/updateTry',
+    async (id, { rejectWithValue }) => {
+        try {
+            return await updateTry(id);
         } catch (error) {
             return rejectWithValue(error.message);
         }
@@ -139,6 +149,13 @@ const quizSlice = createSlice({
             .addCase(updateQuizAvailability.rejected, (state, action) => {
                 state.error = action.payload.message;
             })
+            .addCase(updateQuizTry.fulfilled, (state, action) => {
+                const index = state.quizzes.findIndex(quiz => quiz._id === action.payload.quiz._id);
+                if (index !== -1) state.quizzes[index] = action.payload.quiz;
+            })
+            .addCase(updateQuizTry.rejected, (state, action) => {
+                state.error = action.payload.message;
+            });
 
     },
 });

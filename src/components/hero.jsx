@@ -20,18 +20,20 @@ const Hero = () => {
             physics.
           </p>
           <div className='flex gap-4 mt-8'>
-            <button
-              onClick={handleStart}
+            <Link
+              to="/guest-mode"
               className='py-2.5 px-6 bg-primary text-xl font-bold text-white'
             >
+              
               Try it now
-            </button>
-            <Link
-                to="/guest-mode"
+            </Link>
+            <button
+            onClick={handleStart}
+                
               className='py-2.5 px-6 text-primary border-primary text-xl font-bold border-2'
             >
               Request a demo
-            </Link>
+            </button>
           </div>
         </div>
         <div className='w-1/2'>

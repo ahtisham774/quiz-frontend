@@ -45,7 +45,6 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Dispatch fetchQuizzes action on component mount
-
     dispatch(fetchAllQuizzes(selectedTopic?.value || null))
   }, [selectedTopic?.value, dispatch, pathname])
 
@@ -104,8 +103,8 @@ const Dashboard = () => {
                     to={`quiz/${quiz._id}`}
                     key={index}
                     className={`bg-white w-fit  flex items-center justify-center  ${
-                        !user &&
-                       ( index == 1
+                      !user &&
+                      (quiz.is_for_try
                         ? 'pointer-events-auto cursor-pointer'
                         : 'pointer-events-none cursor-not-allowed text-slate-400')
                     } animate-fade-in`}

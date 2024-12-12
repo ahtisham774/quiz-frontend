@@ -56,6 +56,14 @@ export const updateAvailability = async (id) => {
     if (!response.ok) throw new Error(`Error: ${response.status}`);
     return await response.json();
 };
+export const updateTry = async (id) => {
+
+    const response = await fetch(`${BASE_URL}${quiz}/${id}/toggle-try`, {
+        method: "GET"
+    });
+    if (!response.ok) throw new Error(`Error: ${response.status}`);
+    return await response.json();
+};
 
 // Delete a quiz
 export const deleteQuiz = async (id) => {

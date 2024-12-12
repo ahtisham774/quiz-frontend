@@ -9,7 +9,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import {
   deleteSingleQuiz,
   fetchAllQuizzes,
-  updateQuizAvailability
+  updateQuizAvailability,
+  updateQuizTry
 } from '../../redux/slices/quiz'
 import toast from 'react-hot-toast'
 
@@ -35,6 +36,14 @@ const Quizzes = () => {
   const toggleAvailability = async quiz => {
     try {
       const res = await dispatch(updateQuizAvailability(quiz._id)).unwrap()
+      toast.success(res.message)
+    } catch (error) {
+      console.error('Error updating quiz availability:', error)
+    }
+  }
+  const toggleTry = async quiz => {
+    try {
+      const res = await dispatch(updateQuizTry(quiz._id)).unwrap()
       toast.success(res.message)
     } catch (error) {
       console.error('Error updating quiz availability:', error)
@@ -87,6 +96,7 @@ const Quizzes = () => {
               <th className='p-3 text-xl font-bold'>Topic</th>
               <th className='p-3 text-xl font-bold'>Created Date</th>
               <th className='p-3 text-xl font-bold'>Average Rating</th>
+              <th className='p-3 text-xl font-bold'>For Try</th>
               <th className='p-3 text-xl font-bold'>Available</th>
               <th className='p-3 text-xl font-bold'>Actions</th>
             </tr>
@@ -118,6 +128,23 @@ const Quizzes = () => {
                   </td>
                   <td className='p-3 text-xl font-normal '>
                     {quiz?.avg_rating.toFixed(2)}
+                  </td>
+                  <td className='p-3 text-xl font-normal '>
+                    <label className='switch'>
+                      <input
+                        type='checkbox'
+                        checked={quiz?.is_for_try}
+                        onChange={() => toggleTry(quiz)}
+                      />
+                      <span className='slider'></span>
+                    </label>
+                    {/* <label className="inline-flex items-center cursor-pointer">
+                                        <input
+                                            type="checkbox"
+                                            className="form-checkbox h-5 w-5 text-primary"
+                                            
+                                        />
+                                    </label> */}
                   </td>
                   <td className='p-3 text-xl font-normal '>
                     <label className='switch'>
